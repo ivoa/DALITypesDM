@@ -1,0 +1,155 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$id" : "https://ivoa.net/dm/DALITypesDM-v1.vo-dml.json",
+  "title" : "DataTypes",
+  "description" : "",
+  "type" : "object",
+  "properties" : {
+    "DaliModel" : {
+      "type" : "object",
+      "properties" : {
+        "refs" : {
+          "type" : "object",
+          "properties" : {
+            "$comment" : "placeholder to make commas easier!"
+          },
+          "additionalProperties" : false
+        },
+        "content" : {
+          "type" : "array",
+          "items" : {
+            "anyOf" : [ ]
+          },
+          "additionalProperties" : false
+        }
+      },
+      "additionalProperties" : false
+    }
+  },
+  "$defs" : {
+    "$comment" : "placeholder to make commas easier!",
+    "Point" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "cval1" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "cval2" : {
+          "type" : "number",
+          "description" : ""
+        }
+      },
+      "required" : [ "cval1", "cval2" ],
+      "additionalProperties" : false
+    },
+    "Shape" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ ]
+    },
+    "Circle" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/DALITypesDM-v1.vo-dml.json#/$defs/Shape"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "center" : {
+            "$ref" : "https://ivoa.net/dm/DALITypesDM-v1.vo-dml.json#/$defs/Point",
+            "description" : ""
+          },
+          "radius" : {
+            "type" : "number",
+            "description" : ""
+          }
+        },
+        "required" : [ "center", "radius" ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "MultiShape" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "shapes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://ivoa.net/dm/DALITypesDM-v1.vo-dml.json#/$defs/Shape"
+          },
+          "description" : ""
+        }
+      },
+      "required" : [ "shapes" ],
+      "additionalProperties" : false
+    },
+    "Polygon" : {
+      "allOf" : [ {
+        "$ref" : "https://ivoa.net/dm/DALITypesDM-v1.vo-dml.json#/$defs/Shape"
+      }, {
+        "type" : "object",
+        "description" : "",
+        "properties" : {
+          "$comment" : "placeholder to make commas easier!",
+          "@type" : {
+            "type" : "string"
+          },
+          "points" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "https://ivoa.net/dm/DALITypesDM-v1.vo-dml.json#/$defs/Point"
+            },
+            "description" : ""
+          }
+        },
+        "required" : [ ]
+      } ],
+      "unevaluatedProperties" : false
+    },
+    "Interval" : {
+      "type" : "object",
+      "description" : "",
+      "properties" : {
+        "$comment" : "placeholder to make commas easier!",
+        "@type" : {
+          "type" : "string"
+        },
+        "lower" : {
+          "type" : "number",
+          "description" : ""
+        },
+        "upper" : {
+          "type" : "number",
+          "description" : ""
+        }
+      },
+      "required" : [ "lower", "upper" ],
+      "additionalProperties" : false
+    },
+    "uuid" : {
+      "type" : "object",
+      "properties" : {
+        "value" : "string"
+      }
+    }
+  }
+}

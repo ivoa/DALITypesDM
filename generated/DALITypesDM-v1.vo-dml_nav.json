@@ -1,0 +1,25 @@
+
+
+            {
+            "dali model": [
+            {
+            "Overview": "generated/DALITypesDM-v1.vo-dml.md"
+            }
+
+            
+                ,{
+                "DataTypes": [
+                {"Circle" : "generated/dali/Circle.md"},{"Interval" : "generated/dali/Interval.md"},{"MultiShape" : "generated/dali/MultiShape.md"},{"Point" : "generated/dali/Point.md"},{"Polygon" : "generated/dali/Polygon.md"},{"Shape" : "generated/dali/Shape.md"}
+                ]
+                }
+            
+                ,{
+                "PrimitiveTypes": [
+                {"double" : "generated/dali/double.md"},{"int32" : "generated/dali/int32.md"},{"int64" : "generated/dali/int64.md"},{"uuid" : "generated/dali/uuid.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

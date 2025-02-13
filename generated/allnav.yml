@@ -1,0 +1,32 @@
+- dali model:
+  - Overview: "generated/DALITypesDM-v1.vo-dml.md"
+  - DataTypes:
+    - Circle: "generated/dali/Circle.md"
+    - Interval: "generated/dali/Interval.md"
+    - MultiShape: "generated/dali/MultiShape.md"
+    - Point: "generated/dali/Point.md"
+    - Polygon: "generated/dali/Polygon.md"
+    - Shape: "generated/dali/Shape.md"
+  - PrimitiveTypes:
+    - double: "generated/dali/double.md"
+    - int32: "generated/dali/int32.md"
+    - int64: "generated/dali/int64.md"
+    - uuid: "generated/dali/uuid.md"
+- Imported Models:
+  - ivoa model:
+    - Overview: "generated/IVOA-v1.0.vo-dml.md"
+    - DataTypes:
+      - IntegerQuantity: "generated/ivoa/IntegerQuantity.md"
+      - Quantity: "generated/ivoa/Quantity.md"
+      - RealQuantity: "generated/ivoa/RealQuantity.md"
+    - PrimitiveTypes:
+      - Unit: "generated/ivoa/Unit.md"
+      - anyURI: "generated/ivoa/anyURI.md"
+      - boolean: "generated/ivoa/boolean.md"
+      - complex: "generated/ivoa/complex.md"
+      - datetime: "generated/ivoa/datetime.md"
+      - integer: "generated/ivoa/integer.md"
+      - nonnegativeInteger: "generated/ivoa/nonnegativeInteger.md"
+      - rational: "generated/ivoa/rational.md"
+      - real: "generated/ivoa/real.md"
+      - string: "generated/ivoa/string.md"
