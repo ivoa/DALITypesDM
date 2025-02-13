@@ -1,0 +1,42 @@
+
+model dali (0.1) "a general purpose collection of data types"
+     
+author "Patrick Dowler, Canadian Astronomy Data Centre"
+title "DataTypes"
+       include "../build/tmp/IVOA-v1.0.vodsl"
+     
+    primitive uuid  "represents a 128-bit binary ID in the canonical ascii UUID format"
+    primitive double  "an IEEE double precision (64-bit) floating point value"
+    primitive int32  "a 32-bit signed integer"
+    primitive int64  "a 64-bit signed integer"
+dtype Point  "location on the sky"
+  {   
+        cval1: double  "";
+        cval2: double  "";
+  }
+
+abstract dtype Shape "base type of all shapes"
+  {   
+  }
+
+dtype Circle  -> Shape "a circular region on the sky"
+  {   
+        center: Point  "";
+        radius: double  "";
+  }
+
+dtype MultiShape  "multiple simple shapes describing regions as a single value"
+  {   
+        shapes: Shape  @+  "";
+  }
+
+dtype Polygon  -> Shape "a simple polygon region on the sky defined a sequence of points connected by great-circle segments"
+  {   
+        points: Point @[3..-1] "";
+  }
+
+dtype Interval  "a set of numeric values defined by a lower and upper bound (bounds included: [a,b])"
+  {   
+        lower: double  "";
+        upper: double  "";
+  }

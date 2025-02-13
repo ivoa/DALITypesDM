@@ -1,26 +1,29 @@
 plugins {
     // this plugin provides all the vo-dml functionality
     id("net.ivoa.vo-dml.vodmltools") version "0.5.15"
+    `maven-publish`
+    signing
 }
+group = "net.ivoa.dm"
+version = "0.1-SNAPSHOT"
 
 vodml {
     vodmlDir.set(file("vo-dml"))
     vodslDir.set(file("model"))
-    bindingFiles.setFrom(file("vo-dml/TemplateDM-v1.vodml-binding.xml"))
+    bindingFiles.setFrom(file("vo-dml/DALITypesDM-v1.vodml-binding.xml"))
     outputDocDir.set(layout.projectDirectory.dir("doc/std/vodml-generated"))
     outputSiteDir.set(layout.projectDirectory.dir("doc/site/generated")) // N.B the last part of this path must be "generated"
-
 }
-/* uncomment below to run the generation of vodml from vodsl automatically */
-//tasks.named("vodmlJavaGenerate") {
-//    dependsOn("vodslToVodml")
-//}
-//tasks.named("vodmlSchema") {
-//    dependsOn("vodslToVodml")
-//}
-//tasks.named("vodmlSite") {
-//    dependsOn("vodslToVodml")
-//}
+
+tasks.named("vodmlJavaGenerate") {
+    dependsOn("vodslToVodml")
+}
+tasks.named("vodmlSchema") {
+    dependsOn("vodslToVodml")
+}
+tasks.named("vodmlSite") {
+    dependsOn("vodslToVodml")
+}
 
 
 tasks.test {
@@ -82,5 +85,13 @@ tasks.register<Exec>("doSite"){
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+        }
     }
 }

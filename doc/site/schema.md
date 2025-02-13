@@ -3,6 +3,6 @@ Schema
 
 The schema for the model instance serializations can be found below
 
-* [XML](generated/schema/TemplateDM-v1.vo-dml.xsd){:download=TemplateDM-v1.vo-dml.xsd}
-* [JSON](generated/schema/TemplateDM-v1.vo-dml.json){:download=TemplateDM-v1.vo-dml.json}
-* [JSON](generated/schema/TemplateDM-v1.vo-dml.tap.xml){:download=TemplateDM-v1.vo-dml.tap.xml}
+* [XML](generated/schema/DALITypesDM-v1.vo-dml.xsd){:download=DALITypesDM-v1.vo-dml.xsd}
+* [JSON](generated/schema/DALITypesDM-v1.vo-dml.json){:download=DALITypesDM-v1.vo-dml.json}
+* [JSON](generated/schema/DALITypesDM-v1.vo-dml.tap.xml){:download=DALITypesDM-v1.vo-dml.tap.xml}

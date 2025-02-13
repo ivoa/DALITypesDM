@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m:mappedModels xmlns:m="http://www.ivoa.net/xml/vodml-binding/v0.9.1">
+    <!-- minimal template-->
+    <model>
+        <name>dali</name> <!-- note that this is the model name and "prefix" to vodml-ids -->
+        <file>DALITypesDM-v1.vo-dml.xml</file> <!-- this is the local file name -->
+        <java-package>net.ivoa.dm.dali</java-package> <!-- the java package for the generated code -->
+        <xml-targetnamespace prefix="mymodel">http://ivoa.net/dm/dali/v0.1</xml-targetnamespace>
+        <type-mapping>
+            <vodml-id>double</vodml-id>
+            <java-type jpa-atomic="true">Double</java-type>
+            <python-type built-in="true">float</python-type>
+            <xsd-type>xsd:double</xsd-type>
+            <json-type built-in="true">number</json-type>
+        </type-mapping>
+        <type-mapping>
+            <vodml-id>int64</vodml-id>
+            <java-type jpa-atomic="true">Long</java-type>
+            <python-type built-in="true">int</python-type>
+            <xsd-type>xsd:long</xsd-type>
+            <json-type built-in="true">number</json-type>
+        </type-mapping>
+        <type-mapping>
+            <vodml-id>int32</vodml-id>
+            <java-type jpa-atomic="true">Integer</java-type>
+            <python-type built-in="true">int</python-type>
+            <xsd-type>xsd:int</xsd-type>
+            <json-type built-in="true">number</json-type>
+        </type-mapping>
+    </model>
+</m:mappedModels>
