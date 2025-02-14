@@ -1,0 +1,11 @@
+model dalitest (0.1) "temporary model to explore the use of the DALITypes" 
+author "Paul Harrison"
+include "DALITypesDM-v1.vodsl"
+
+otype ATest "" {
+	apoint: dali:Point "";
+	acircle : dali:Circle "";
+	amultishape : dali:MultiShape "";
+	apoly : dali:Polygon "";
+	aninterval : dali:Interval "";	
+}

@@ -5,7 +5,7 @@
         <name>dali</name> <!-- note that this is the model name and "prefix" to vodml-ids -->
         <file>DALITypesDM-v1.vo-dml.xml</file> <!-- this is the local file name -->
         <java-package>net.ivoa.dm.dali</java-package> <!-- the java package for the generated code -->
-        <xml-targetnamespace prefix="mymodel">http://ivoa.net/dm/dali/v0.1</xml-targetnamespace>
+        <xml-targetnamespace prefix="dali">http://ivoa.net/dm/dali/v0.1</xml-targetnamespace>
         <type-mapping>
             <vodml-id>double</vodml-id>
             <java-type jpa-atomic="true">Double</java-type>
@@ -27,5 +27,11 @@
             <xsd-type>xsd:int</xsd-type>
             <json-type built-in="true">number</json-type>
         </type-mapping>
+    </model>
+    <model>
+        <name>dalitest</name>
+        <file>DaliTest.vo-dml.xml</file>
+        <java-package>net.ivoa.dm.dali.test</java-package>
+        <xml-targetnamespace prefix="dalit">http://ivoa.net/dm/dali/test/v0.1</xml-targetnamespace>
     </model>
 </m:mappedModels>
